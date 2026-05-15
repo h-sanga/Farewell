@@ -16,3 +16,11 @@ setInterval(() => {
     `${days} Days ${hours} Hours ${minutes} Minutes`;
 
 }, 1000);
+
+// Autoplay music
+const audio = document.querySelector('.music-player');
+if (audio) {
+  audio.play().catch(error => {
+    console.log('Autoplay was prevented:', error);
+  });
+}
