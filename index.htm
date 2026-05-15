@@ -14,7 +14,7 @@
 <body>
 
   <!-- Background Music -->
-  <audio id="backgroundMusic" loop>
+  <audio autoplay loop controls class="music-player">
     <source src="images/music/song.mp3" type="audio/mp3">
   </audio>
 
@@ -31,14 +31,6 @@
         16 May 2026 • 8:00 PM
       </div>
     </div>
-  </section>
-
-  <!-- Music Player Button -->
-  <section class="music-section">
-    <p class="music-text">Please play me</p>
-    <button id="playMusicBtn" class="play-btn">
-      <span class="btn-icon">▶</span> Play Music
-    </button>
   </section>
 
   <!-- Invitation Message -->
@@ -120,20 +112,5 @@
   </section>
 
   <script src="script.js"></script>
-  <script>
-    // Music player functionality
-    const audio = document.getElementById('backgroundMusic');
-    const playBtn = document.getElementById('playMusicBtn');
-
-    playBtn.addEventListener('click', function() {
-      if (audio.paused) {
-        audio.play();
-        playBtn.innerHTML = '<span class="btn-icon">⏸</span> Pause Music';
-      } else {
-        audio.pause();
-        playBtn.innerHTML = '<span class="btn-icon">▶</span> Play Music';
-      }
-    });
-  </script>
 </body>
 </html>
